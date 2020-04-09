@@ -5,7 +5,8 @@
 
 int main()
 {
-    int opcion=999999, num=0, res=0, m, n;
+    int opcion=999999, num=0, m, n;
+    unsigned long long int res=0;
     printf("\tMENU:\n"
            "\n1-FACTORIAL\n"
            "2-COMBINATORIA\n"
@@ -15,8 +16,11 @@ int main()
            "6-sen(x)\n"
            "7-NUMERO NATURAL ES: PERFECTO, DEFICIENTE O ABUNDANTE\n"
 
-           "\n0-SALIR"
-           "\nINGRESE NUMERO:\t"
+           "\n\tEXTRAS:\n"
+           "90-GENERAR FIBONACCI\n"
+
+           "\n0-SALIR\n"
+           "\n\tINGRESE NUMERO:\t"
            );
     scanf("%d",&opcion);
     do{
@@ -67,6 +71,13 @@ int main()
             scanf("%d", &num);
             esNatural(num);
             getch();
+
+        case 90:
+            system("cls");
+            printf("DADO X DEVUELVE LOS NUMEROS ANTERIORES DE LA SERIE INCLUIDO EL INGRESADO POR TECLADO.\nINGRESE NUMERO:\t");
+            scanf("%d", &num);
+            fibonacci(num);
+            getch(0);
         }
     }while(opcion!=0);
     return 0;
